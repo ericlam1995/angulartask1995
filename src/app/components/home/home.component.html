@@ -1,0 +1,9 @@
+<div class="pageloader is-active" *ngIf="loadinghome"></div>
+<div class="infraloader is-active" *ngIf="loadinghome"></div>
+<div class="app-overlay" *ngIf="loadinghome"></div>
+<app-navbar *ngIf="!loadinghome"></app-navbar> -->
+<div class="view-wrapper" *ngIf="!loadinghome">
+  <app-feed></app-feed>
+</div>
+<app-explore></app-explore>
+<app-chat></app-chat>

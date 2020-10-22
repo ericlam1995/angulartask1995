@@ -1,0 +1,2036 @@
+<div class="chat-wrapper" [ngClass]="{'is-active': switchserv.displaychat}">
+    <div class="chat-inner">
+
+        <!-- Chat top navigation -->
+        <div class="chat-nav">
+            <div class="nav-start">
+                <div class="recipient-block">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/dan.jpg"
+                            data-demo-src="assets/img/avatars/dan.jpg" alt="">
+                    </div>
+                    <div class="username">
+                        <span>Dan Walker</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-star">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg> <span>| Online</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-end">
+
+                <!-- Settings icon dropdown -->
+                <div class="dropdown is-spaced is-neutral is-right dropdown-trigger">
+                    <div>
+                        <a class="chat-nav-item is-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-settings">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-message-square">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Details</h3>
+                                        <small>View this conversation's details.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-settings">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                        </path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Preferences</h3>
+                                        <small>Define your preferences.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-bell">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Notifications</h3>
+                                        <small>Set notifications settings.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-bell-off">
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                        <path d="M18.63 13A17.89 17.89 0 0 1 18 8"></path>
+                                        <path d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14"></path>
+                                        <path d="M18 8a6 6 0 0 0-9.33-5"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Silence</h3>
+                                        <small>Disable notifications.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-box">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Archive</h3>
+                                        <small>Archive this conversation.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-trash-2">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                        </path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Delete</h3>
+                                        <small>Delete this conversation.</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-search">
+                    <div class="control has-icon">
+                        <input type="text" class="input" placeholder="Search messages">
+                        <div class="form-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-search">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <a class="chat-nav-item is-icon is-hidden-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-at-sign">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                    </svg>
+                </a>
+                <a class="chat-nav-item is-icon is-hidden-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-star">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                    </svg>
+                </a>
+
+                <!-- More dropdown -->
+                <div class="dropdown is-spaced is-neutral is-right dropdown-trigger" [ngClass]="{'is-active': optiondisplay}">
+                    <div>
+                        <a class="chat-nav-item is-icon no-margin" (click)="optiondisplay = !optiondisplay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-more-vertical">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-file-text">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Files</h3>
+                                        <small>View all your files.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-users">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Users</h3>
+                                        <small>View all users you're talking to.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-gift">
+                                        <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                                        <rect x="2" y="7" width="20" height="5"></rect>
+                                        <line x1="12" y1="22" x2="12" y2="7"></line>
+                                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Daily bonus</h3>
+                                        <small>Get your daily bonus.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-download-cloud">
+                                        <polyline points="8 17 12 21 16 17"></polyline>
+                                        <line x1="12" y1="12" x2="12" y2="21"></line>
+                                        <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Downloads</h3>
+                                        <small>See all your downloads.</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-life-buoy">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                                        <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                                        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                                        <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                                        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                                    </svg>
+                                    <div class="media-content">
+                                        <h3>Support</h3>
+                                        <small>Reach our support team.</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="chat-nav-item is-icon close-chat" (click)="switchserv.displaychat = !switchserv.displaychat">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- Chat sidebar -->
+        <div id="chat-sidebar" class="users-sidebar">
+            <!-- Header -->
+            <div class="header-item">
+                <img src="../../../assets/img/friendkit-bold.svg" alt="">
+            </div>
+            <!-- User list -->
+            <div class="conversations-list has-slimscroll-xs">
+                <!-- User -->
+                <div class="user-item is-active" data-chat-user="dan" data-full-name="Dan Walker" data-status="Online">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/dan.jpg"
+                            data-demo-src="assets/img/avatars/dan.jpg" alt="">
+                        <div class="user-status is-online"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="stella" data-full-name="Stella Bergmann" data-status="Busy">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/stella.jpg"
+                            data-demo-src="assets/img/avatars/stella.jpg" alt="">
+                        <div class="user-status is-busy"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="daniel" data-full-name="Daniel Wellington" data-status="Away">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/daniel.jpg"
+                            data-demo-src="assets/img/avatars/daniel.jpg" alt="">
+                        <div class="user-status is-away"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="david" data-full-name="David Kim" data-status="Busy">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/david.jpg"
+                            data-demo-src="assets/img/avatars/david.jpg" alt="">
+                        <div class="user-status is-busy"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="edward" data-full-name="Edward Mayers" data-status="Online">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/edward.jpeg"
+                            data-demo-src="assets/img/avatars/edward.jpeg" alt="">
+                        <div class="user-status is-online"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="elise" data-full-name="Elise Walker" data-status="Away">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/elise.jpg"
+                            data-demo-src="assets/img/avatars/elise.jpg" alt="">
+                        <div class="user-status is-away"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="nelly" data-full-name="Nelly Schwartz" data-status="Busy">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/nelly.png"
+                            data-demo-src="assets/img/avatars/nelly.png" alt="">
+                        <div class="user-status is-busy"></div>
+                    </div>
+                </div>
+                <!-- User -->
+                <div class="user-item" data-chat-user="milly" data-full-name="Milly Augustine" data-status="Busy">
+                    <div class="avatar-container">
+                        <img class="user-avatar" src="../../../assets/img/milly.jpg"
+                            data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                        <div class="user-status is-busy"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Conversation -->
+            <div class="footer-item">
+                <div class="add-button modal-trigger" data-modal="add-conversation-modal"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-user">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg></div>
+            </div>
+        </div>
+
+        <!-- Chat body -->
+        <div id="chat-body" class="chat-body is-opened">
+            <!-- Conversation with Dan -->
+            <div id="dan-conversation" class="chat-body-inner has-slimscroll">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Today</span>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/dan.jpg" data-demo-src="../../../assets/img/dan.jpg" alt="">
+                    <div class="message-block">
+                        <span>8:03am</span>
+                        <div class="message-text">Hi Jenna! I made a new design, and i wanted to show it to you.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/dan.jpg" data-demo-src="../../../assets/img/dan.jpg" alt="">
+                    <div class="message-block">
+                        <span>8:03am</span>
+                        <div class="message-text">It's quite clean and it's inspired from Bulkit.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>8:12am</span>
+                        <div class="message-text">Oh really??! I want to see that.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/dan.jpg" data-demo-src="../../../assets/img/dan.jpg" alt="">
+                    <div class="message-block">
+                        <span>8:13am</span>
+                        <div class="message-text">FYI it was done in less than a day.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>8:17am</span>
+                        <div class="message-text">Great to hear it. Just send me the PSD files so i can have a look at
+                            it.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>8:18am</span>
+                        <div class="message-text">And if you have a prototype, you can also send me the link to it.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Stella -->
+            <div id="stella-conversation" class="chat-body-inner has-slimscroll is-hidden">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Today</span>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>10:34am</span>
+                        <div class="message-text">Hey Stella! Aren't we supposed to go the theatre after work?.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>10:37am</span>
+                        <div class="message-text">Just remembered it.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/stella.jpg" data-demo-src="../../../assets/img/stella.jpg" alt="">
+                    <div class="message-block">
+                        <span>11:22am</span>
+                        <div class="message-text">Yeah you always do that, forget about everything.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Daniel -->
+            <div id="daniel-conversation" class="chat-body-inner has-slimscroll is-hidden">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Yesterday</span>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>3:24pm</span>
+                        <div class="message-text">Daniel, Amanda told me about your issue, how can I help?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/daniel.jpg" data-demo-src="../../../assets/img/daniel.jpg" alt="">
+                    <div class="message-block">
+                        <span>3:42pm</span>
+                        <div class="message-text">Hey Jenna, thanks for answering so quickly. Iam stuck, i need a car.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/daniel.jpg" data-demo-src="../../../assets/img/daniel.jpg" alt="">
+                    <div class="message-block">
+                        <span>3:43pm</span>
+                        <div class="message-text">Can i borrow your car for a quick ride to San Fransisco? Iam running
+                            behind and
+                            there' no train in sight.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with David -->
+            <div id="david-conversation" class="chat-body-inner has-slimscroll is-hidden">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Today</span>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="../../../assets/img/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>12:34pm</span>
+                        <div class="message-text">Damn you! Why would you even implement this in the game?.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>12:32pm</span>
+                        <div class="message-text">I just HATE aliens.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/david.jpg" data-demo-src="assets/img/avatars/david.jpg" alt="">
+                    <div class="message-block">
+                        <span>13:09pm</span>
+                        <div class="message-text">C'mon, you just gotta learn the tricks. You can't expect aliens to
+                            behave like
+                            humans. I mean that's how the mechanics are.</div>
+                    </div>
+                </div>
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/david.jpg" data-demo-src="assets/img/avatars/david.jpg" alt="">
+                    <div class="message-block">
+                        <span>13:11pm</span>
+                        <div class="message-text">I checked the replay and for example, you always get supply blocked.
+                            That's not
+                            the right thing to do.</div>
+                    </div>
+                </div>
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>13:12pm</span>
+                        <div class="message-text">I know but i struggle when i have to decide what to make from larvas.
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/david.jpg" data-demo-src="assets/img/avatars/david.jpg" alt="">
+                    <div class="message-block">
+                        <span>13:17pm</span>
+                        <div class="message-text">Join me in game, i'll show you.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Edward -->
+            <div id="edward-conversation" class="chat-body-inner has-slimscroll">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Monday</span>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/edward.jpeg" data-demo-src="assets/img/avatars/edward.jpeg" alt="">
+                    <div class="message-block">
+                        <span>4:55pm</span>
+                        <div class="message-text">Hey Jenna, what's up?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/edward.jpeg" data-demo-src="assets/img/avatars/edward.jpeg" alt="">
+                    <div class="message-block">
+                        <span>4:56pm</span>
+                        <div class="message-text">Iam coming to LA tomorrow. Interested in having lunch?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>5:21pm</span>
+                        <div class="message-text">Hey mate, it's been a while. Sure I would love to.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/edward.jpeg" data-demo-src="assets/img/avatars/edward.jpeg" alt="">
+                    <div class="message-block">
+                        <span>5:27pm</span>
+                        <div class="message-text">Ok. Let's say i pick you up at 12:30 at work, works?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>5:43pm</span>
+                        <div class="message-text">Yup, that works great.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>5:44pm</span>
+                        <div class="message-text">And yeah, don't forget to bring some of my favourite cheese cake.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/edward.jpeg" data-demo-src="assets/img/avatars/edward.jpeg" alt="">
+                    <div class="message-block">
+                        <span>5:27pm</span>
+                        <div class="message-text">No worries</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Edward -->
+            <div id="elise-conversation" class="chat-body-inner has-slimscroll is-hidden">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">September 28</span>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>11:53am</span>
+                        <div class="message-text">Elise, i forgot my folder at your place yesterday.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>11:53am</span>
+                        <div class="message-text">I need it badly, it's work stuff.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/elise.jpg" data-demo-src="assets/img/avatars/elise.jpg" alt="">
+                    <div class="message-block">
+                        <span>12:19pm</span>
+                        <div class="message-text">Yeah i noticed. I'll drop it in half an hour at your office.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Nelly -->
+            <div id="nelly-conversation" class="chat-body-inner has-slimscroll is-hidden">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">September 17</span>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>8:22pm</span>
+                        <div class="message-text">So you watched the movie?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>8:22pm</span>
+                        <div class="message-text">Was it scary?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/nelly.png" data-demo-src="assets/img/avatars/nelly.png" alt="">
+                    <div class="message-block">
+                        <span>9:03pm</span>
+                        <div class="message-text">It was so frightening, i felt my heart was about to blow inside my
+                            chest.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation with Milly -->
+            <div id="milly-conversation" class="chat-body-inner has-slimscroll">
+                <div class="date-divider">
+                    <hr class="date-divider-line">
+                    <span class="date-divider-text">Today</span>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/milly.jpg" data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                    <div class="message-block">
+                        <span>2:01pm</span>
+                        <div class="message-text">Hello Jenna, did you read my proposal?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/milly.jpg" data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                    <div class="message-block">
+                        <span>2:01pm</span>
+                        <div class="message-text">Didn't hear from you since i sent it.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>2:02pm</span>
+                        <div class="message-text">Hello Milly, Iam really sorry, Iam so busy recently, but i had the
+                            time to read
+                            it.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/milly.jpg" data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                    <div class="message-block">
+                        <span>2:04pm</span>
+                        <div class="message-text">And what did you think about it?</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>2:05pm</span>
+                        <div class="message-text">Actually it's quite good, there might be some small changes but
+                            overall it's
+                            great.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-sent">
+                    <img src="../../../assets/img/jenna.png" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <div class="message-block">
+                        <span>2:07pm</span>
+                        <div class="message-text">I think that i can give it to my boss at this stage.</div>
+                    </div>
+                </div>
+
+                <div class="chat-message is-received">
+                    <img src="../../../assets/img/milly.jpg" data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                    <div class="message-block">
+                        <span>2:09pm</span>
+                        <div class="message-text">Crossing fingers then</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Compose message area -->
+            <div class="chat-action">
+                <div class="chat-action-inner">
+                    <div class="control">
+                        <textarea class="textarea comment-textarea" rows="1"></textarea>
+                        <div class="dropdown compose-dropdown is-spaced is-accent is-up dropdown-trigger">
+                            <div>
+                                <div class="add-button">
+                                    <div class="button-inner">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item">
+                                        <div class="media">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-code">
+                                                <polyline points="16 18 22 12 16 6"></polyline>
+                                                <polyline points="8 6 2 12 8 18"></polyline>
+                                            </svg>
+                                            <div class="media-content">
+                                                <h3>Code snippet</h3>
+                                                <small>Add and paste a code snippet.</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <div class="media">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-file-text">
+                                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                </path>
+                                                <polyline points="14 2 14 8 20 8"></polyline>
+                                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                <polyline points="10 9 9 9 8 9"></polyline>
+                                            </svg>
+                                            <div class="media-content">
+                                                <h3>Note</h3>
+                                                <small>Add and paste a note.</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a class="dropdown-item">
+                                        <div class="media">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-server">
+                                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                            </svg>
+                                            <div class="media-content">
+                                                <h3>Remote file</h3>
+                                                <small>Add a file from a remote drive.</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <div class="media">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-monitor">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                            </svg>
+                                            <div class="media-content">
+                                                <h3>Local file</h3>
+                                                <small>Add a file from your computer.</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="chat-panel" class="chat-panel is-opened">
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <h3>Details</h3>
+                    <div class="panel-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Dan details -->
+                <div id="dan-details" class="panel-body is-user-details">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="assets/img/avatars/dan.jpg" data-demo-src="assets/img/avatars/dan.jpg" alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Dan Walker</h3>
+                            <h4>IOS Developer</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-green">
+                                <div>
+                                    <i class="mdi mdi-dog"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-blue">
+                                <div>
+                                    <i class="mdi mdi-briefcase"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">WebSmash Inc.</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-school"></i>
+                                <div class="about-text">
+                                    <span>Studied at</span>
+                                    <span><a class="is-inverted" href="#">Riverdale University</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Stella details -->
+                <div id="stella-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/stella.jpg" data-demo-src="assets/img/avatars/stella.jpg"
+                                alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Stella Bergmann</h3>
+                            <h4>Shop Owner</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-purple">
+                                <div>
+                                    <i class="mdi mdi-bomb"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-check-decagram"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Trending Fashions</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Oklahoma City</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Daniel details -->
+                <div id="daniel-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/daniel.jpg" data-demo-src="assets/img/avatars/daniel.jpg"
+                                alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Daniel Wellington</h3>
+                            <h4>Senior Executive</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-google-cardboard"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-blue">
+                                <div>
+                                    <i class="mdi mdi-pizza"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-linux"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-puzzle"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Peelman &amp; Sons</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Los Angeles</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- David details -->
+                <div id="david-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/david.jpg" data-demo-src="assets/img/avatars/david.jpg" alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>David Kim</h3>
+                            <h4>Senior Developer</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-green">
+                                <div>
+                                    <i class="mdi mdi-dog"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-blue">
+                                <div>
+                                    <i class="mdi mdi-briefcase"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Frost Entertainment</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Chicago</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Edward details -->
+                <div id="edward-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/edward.jpeg" data-demo-src="assets/img/avatars/edward.jpeg"
+                                alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Edward Mayers</h3>
+                            <h4>Financial analyst</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-green">
+                                <div>
+                                    <i class="mdi mdi-dog"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Brettmann Bank</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Santa Fe</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Elise details -->
+                <div id="elise-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/elise.jpg" data-demo-src="assets/img/avatars/elise.jpg" alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Elise Walker</h3>
+                            <h4>Social influencer</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Social Media</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">London</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Nelly details -->
+                <div id="nelly-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/nelly.png" data-demo-src="assets/img/avatars/nelly.png" alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Nelly Schwartz</h3>
+                            <h4>HR Manager</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-green">
+                                <div>
+                                    <i class="mdi mdi-dog"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-blue">
+                                <div>
+                                    <i class="mdi mdi-briefcase"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Carrefour</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Melbourne</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Milly details -->
+                <div id="milly-details" class="panel-body is-user-details is-hidden">
+                    <div class="panel-body-inner">
+
+                        <div class="subheader">
+                            <div class="action-icon">
+                                <i class="mdi mdi-video"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-camera"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="mdi mdi-microphone"></i>
+                            </div>
+                            <div
+                                class="dropdown details-dropdown is-spaced is-neutral is-right dropdown-trigger ml-auto">
+                                <div>
+                                    <div class="action-icon">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a href="#" class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>View profile</h3>
+                                                    <small>View this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Send message</h3>
+                                                    <small>Send a message to the user's inbox.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-share-2">
+                                                    <circle cx="18" cy="5" r="3"></circle>
+                                                    <circle cx="6" cy="12" r="3"></circle>
+                                                    <circle cx="18" cy="19" r="3"></circle>
+                                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Share profile</h3>
+                                                    <small>Share this user's profile.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="media">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                                <div class="media-content">
+                                                    <h3>Block user</h3>
+                                                    <small>Block this user permanently.</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-avatar">
+                            <img src="../../../assets/img/milly.jpg" data-demo-src="assets/img/avatars/milly.jpg" alt="">
+                            <div class="call-me">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="user-meta has-text-centered">
+                            <h3>Milly Augustine</h3>
+                            <h4>Sales Manager</h4>
+                        </div>
+
+                        <div class="user-badges">
+                            <div class="hexagon is-red">
+                                <div>
+                                    <i class="mdi mdi-heart"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-green">
+                                <div>
+                                    <i class="mdi mdi-dog"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-accent">
+                                <div>
+                                    <i class="mdi mdi-flash"></i>
+                                </div>
+                            </div>
+                            <div class="hexagon is-blue">
+                                <div>
+                                    <i class="mdi mdi-briefcase"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-about">
+                            <label>About Me</label>
+                            <div class="about-block">
+                                <i class="mdi mdi-domain"></i>
+                                <div class="about-text">
+                                    <span>Works at</span>
+                                    <span><a class="is-inverted" href="#">Salesforce</a></span>
+                                </div>
+                            </div>
+                            <div class="about-block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <div class="about-text">
+                                    <span>From</span>
+                                    <span><a class="is-inverted" href="#">Seattle</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
